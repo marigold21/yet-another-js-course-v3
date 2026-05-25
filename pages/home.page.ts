@@ -15,6 +15,9 @@ export class HomePage {
   }
 
   async clickProductByName(productName: string) {
-  await this.page.locator('a', { hasText: productName }).click();
-}
+    await this.page
+      .getByTestId('product-name')
+      .filter({ hasText: productName })
+      .click();
+  }
 }
