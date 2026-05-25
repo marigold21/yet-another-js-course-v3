@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "lint": "eslint . --fix"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marigold21/yet-another-js-course-v3.git"
@@ -17,7 +19,12 @@
   },
   "homepage": "https://github.com/marigold21/yet-another-js-course-v3#readme",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.59.1",
-    "@types/node": "^25.6.1"
+    "@types/node": "^25.6.1",
+    "eslint": "^10.4.0",
+    "eslint-plugin-playwright": "^2.10.2",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.3"
   }
 }
