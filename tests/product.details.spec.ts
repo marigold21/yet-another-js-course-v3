@@ -19,7 +19,7 @@ test('Verify user can view product details', async ({ page }) => {
   await homePage.clickProductByName('Combination Pliers');
 
   await expect(page).toHaveURL(
-    'https://practicesoftwaretesting.com/product/01KSG4PXB4FFAM7J8PE0B4K7PW',
+    'https://practicesoftwaretesting.com/product/01KSG84PZ87MTTKSKSK6D8YJTY',
   );
   await expect(productDetails.productName).toHaveText('Combination Pliers');
   await expect(productDetails.productPrice).toHaveText('14.15');
