@@ -15,6 +15,6 @@ export class HomePage {
   }
 
   async clickProductByName(productName: string) {
-    await this.page.getByRole('link', { name: productName }).click();
-  }
+  await this.page.locator('a', { hasText: productName }).click();
+}
 }
