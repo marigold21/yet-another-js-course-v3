@@ -11,12 +11,14 @@ export class HomePage {
   }
 
   async openHomePage() {
+    const responsePromise = this.page.waitForResponse('**/products');
     await this.page.goto('/');
+    await responsePromise;
   }
 
   async clickProductByName(productName: string) {
     await this.page
-      .getByTestId('product-name')
+      .locator('[data-test="product-name"]')
       .filter({ hasText: new RegExp(productName) })
       .click();
   }
